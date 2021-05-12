@@ -18,3 +18,12 @@ For auto-start and watcher:
 * add nodemon (npm i nodemon), and use it like this in separate terminal ```npx nodemon server```
 * change package.json as to add --watch to your start ```"start": "tsc index.ts --watch"```
 If nodemon starts making troubles: https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found
+
+**Lightweight tutorial:**
+https://www.tutorialspoint.com/typescript/typescript_quick_guide.htm
+
+**Official handbook tutorial:**
+https://www.typescriptlang.org/docs/handbook/intro.html
+
+**Online Playground**
+https://www.typescriptlang.org/play
