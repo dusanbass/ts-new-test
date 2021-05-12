@@ -1,3 +1,9 @@
+**Use the project:**
+```npm i```
+```npm run start```
+
+And you can use debugger in VS Code as usual
+
 TS config file was needed:
 https://stackoverflow.com/questions/36916989/how-can-i-generate-a-tsconfig-json-file
 
