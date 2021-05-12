@@ -13,4 +13,6 @@ console.log(`newNumer: ${newNumer}`); // string template
 // initialize TS boolean
 const newBoolean:??? = ???;
 console.log(`newBoolean: ${newBoolean}`); // string template
+
+// now run it and see if it appears in the console!
 * */
