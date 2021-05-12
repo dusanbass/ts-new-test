@@ -12,9 +12,6 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\index.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
         }
     ]
 }
