@@ -1,6 +1,6 @@
 **Use the project:**
-```npm i```
-```npm run start```
+* ```npm i```
+* ```npm run start```
 
 And you can use debugger in VS Code as usual
 
