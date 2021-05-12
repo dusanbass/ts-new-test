@@ -14,3 +14,6 @@ https://stackoverflow.com/questions/31169259/how-to-debug-typescript-files-in-vi
 *and go to title Auto-configuration approaches*
 In my case _Attach debugger to running program_ was not needed
 
+For auto-start and watcher:
+* add nodemon (npm i nodemon), and use it like this in separate terminal ```npx nodemon server```
+* change package.json as to add --watch to your start ```"start": "tsc index.ts --watch"```
