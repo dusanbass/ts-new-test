@@ -17,3 +17,4 @@ In my case _Attach debugger to running program_ was not needed
 For auto-start and watcher:
 * add nodemon (npm i nodemon), and use it like this in separate terminal ```npx nodemon server```
 * change package.json as to add --watch to your start ```"start": "tsc index.ts --watch"```
+If nodemon starts making troubles: https://stackoverflow.com/questions/35530930/nodemon-not-working-bash-nodemon-command-not-found
