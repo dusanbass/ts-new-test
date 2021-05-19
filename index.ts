@@ -86,3 +86,30 @@ const cat: Cat = {
 hi();
 const point = new Point(true);
 point.exists();
+
+console.log('\n\n\nNova lekcija')
+
+console.log('\n\n\nAnonimni interfejs')
+function greet(person: { name: string; age: number }) {
+    return `This is a person with a name: ${person.name} and an age: ${person.age}`;
+}
+
+const person: {
+    name: string;
+    age: number;
+} = { name: 'Ime', age: 25 }
+
+console.log(`Logger: ${greet(person)}`) // Template Strings
+
+console.log('\n\n\nDeklarisani interfejs')
+interface Person {
+    name: string;
+    age: number;
+}
+function greetNew(person: Person) {
+    return `This is a person with a name: ${person.name} and an age: ${person.age}`;
+}
+const personNew: Person = {age: 35, name: 'Asdf'}
+console.log(`Logger: ${greetNew(personNew)}`)
+
+console.log('\n\n\\Kraj lekcije')
