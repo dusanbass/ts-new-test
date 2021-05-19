@@ -1,5 +1,6 @@
 import { hi } from './util';
-import { Point } from './Point';
+// import { Point } from './Point';
+import { Point2D } from './Point2D';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -84,8 +85,8 @@ const cat: Cat = {
 }
 
 hi();
-const point = new Point(true);
-point.exists();
+// const point = new Point(true);
+// point.exists();
 
 console.log('\n\n\nNova lekcija')
 
@@ -142,3 +143,40 @@ function greetNewNew(person: EmployedPerson) { // TODO: update to list all
 }
 console.log(`Logger[EmployedPerson]: ${greetNewNew(employedPerson)}`)
 console.log('\n\n\\Kraj lekcije')
+
+
+console.log('\n\n\\Klase')
+
+// KEYWORD class <your class name> {//code for the class...}
+class Point { }
+
+// TO USE A CLASS, USE WITH A NEW - KEYWORD new
+const p = new Point();
+const o = {};
+console.log(`p: ${p}, type: ${typeof p}, JSON: ${JSON.stringify(p)}`)
+console.log(`p: ${o}, type: ${typeof o}, JSON: ${JSON.stringify(o)}`)
+
+// TS EXPECTS A CONSTRUCTOR!!!
+// class Point2D {
+//     x: number;
+//     y: number;
+// }
+
+// TS EXPECTS A CONSTRUCTOR!!!
+// const p2d = new Point2D();
+
+
+console.log('with constructors: \n');
+
+// TO MAKE AN INSTANCE, IS TO USE NEW WITH A CONSTRUCTOR
+const p2D = new Point2D();
+console.log(`p: ${p2D}, type: ${typeof p2D}, JSON: ${JSON.stringify(p2D)}, position: ${p2D.position()}`)
+
+const p2DNewBoth = new Point2D(1, 1);
+console.log(`p: ${p2DNewBoth}, type: ${typeof p2DNewBoth}, JSON: ${JSON.stringify(p2DNewBoth)}, position: ${p2DNewBoth.position()}`)
+
+const p2DNewWithX = new Point2D(1);
+console.log(`p: ${p2DNewWithX}, type: ${typeof p2DNewWithX}, JSON: ${JSON.stringify(p2DNewWithX)}, position: ${p2DNewWithX.position()}`)
+
+const p2DNewWithY = new Point2D(undefined, 1);
+console.log(`p: ${p2DNewWithY}, type: ${typeof p2DNewWithY}, JSON: ${JSON.stringify(p2DNewWithY)}, position: ${p2DNewWithY.position()}`)
