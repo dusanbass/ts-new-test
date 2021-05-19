@@ -1,4 +1,6 @@
 import { hi } from './util';
+import { Point } from './Point';
+
 const message: string = "Hello World!";
 const small = message.toLowerCase();
 console.log(`small ${small}`);
@@ -82,3 +84,5 @@ const cat: Cat = {
 }
 
 hi();
+const point = new Point(true);
+point.exists();
