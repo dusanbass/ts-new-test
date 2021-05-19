@@ -134,11 +134,11 @@ const employedPerson: EmployedPerson = {
 }
 console.log(`Logger[Person]: ${greetNew(employedPerson)}`)
 function greetNewNew(person: EmployedPerson) { // TODO: update to list all
-    return `This is a person with a name: ` +
-        `${person.name} and an age: ${person.age}. ` +
-        `${person.airplane ? 'Has an airplane.' : ''}` +
-        `\nAnd has a salary of: ${person.salary}` + 
+    return `\nThis is a person with a name: ${person.name}` +
+        `\nAnd an age: ${person.age}. ` +
+        `${person.airplane ? '\nHas an airplane.' : ''}` +
+        `\nAnd has a salary of: ${person.salary}` +
         `\nAnd was employed at: ${person.dateOfEmployment}`;  // template string `` with inner variable `${}`
 }
 console.log(`Logger[EmployedPerson]: ${greetNewNew(employedPerson)}`)
-console.log('\n\n\\Kraj lekcije') 
+console.log('\n\n\\Kraj lekcije')
