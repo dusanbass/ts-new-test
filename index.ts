@@ -1,3 +1,4 @@
+import { hi } from './util';
 const message: string = "Hello World!";
 const small = message.toLowerCase();
 console.log(`small ${small}`);
@@ -50,7 +51,7 @@ ourLoggerFunction('log this');
 ourLoggerFunction('log and this', 'optional that');
 
 function mySumFunction(a: number = 0, b: number = 0): number { return a + b }
-const result0 = mySumFunction(1,2);
+const result0 = mySumFunction(1, 2);
 console.log(`mySumFunction(1,2); ${result0}`);
 const result1 = mySumFunction(1);
 console.log(`mySumFunction(1); ${result1}`);
@@ -61,7 +62,7 @@ const arr: Array<number> = [1, 2, 3]; // TypeScript
 // const arr: number[] = [1, 2, 3]; // TypeScript, this is valid too!!!
 
 // Tuple != Array, looks the same tho
-const tup: Array<string|number> = [1, 'number two', 3];
+const tup: Array<string | number> = [1, 'number two', 3];
 // const tup: (string|number)[] = [1, 'number two', 3];
 console.log(`tup; ${tup}`);
 tup.pop();
@@ -80,3 +81,4 @@ const cat: Cat = {
     name: 'Black'
 }
 
+hi();
