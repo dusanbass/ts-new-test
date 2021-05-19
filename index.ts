@@ -111,9 +111,9 @@ interface Person {
 function greetNew(person: Person) {
     return `This is a person with a name: ${person.name} and an age: ${person.age}. ${person.airplane ? 'Has an airplane.' : ''}`; // template string `` with inner variable `${}`
 }
-const personNew: Person = {age: 35, name: 'Asdf'}
+const personNew: Person = { age: 35, name: 'Asdf' }
 console.log(`Logger: ${greetNew(personNew)}`)
-const personNewWithAPlane: Person = {age: 65, name: 'Qwerty', airplane: true}
+const personNewWithAPlane: Person = { age: 65, name: 'Qwerty', airplane: true }
 console.log(`Logger: ${greetNew(personNewWithAPlane)}`)
 
 interface Employee {
@@ -133,5 +133,10 @@ const employedPerson: EmployedPerson = {
     dateOfEmployment: '25/05/1999.'
 }
 console.log(`Logger: ${greetNew(employedPerson)}`)
-
-console.log('\n\n\\Kraj lekcije')
+function greetNewNew(person: EmployedPerson) { // TODO: update to list all
+    return `This is a person with a name: ` +
+        `${person.name} and an age: ${person.age}. ` +
+        `${person.airplane ? 'Has an airplane.' : ''}` +
+        ``; // template string `` with inner variable `${}`
+}
+console.log('\n\n\\Kraj lekcije') 
