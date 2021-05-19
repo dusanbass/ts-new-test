@@ -105,11 +105,33 @@ console.log('\n\n\nDeklarisani interfejs')
 interface Person {
     name: string;
     age: number;
+    airplane?: boolean;
 }
+// TERNARY operator ?
 function greetNew(person: Person) {
-    return `This is a person with a name: ${person.name} and an age: ${person.age}`;
+    return `This is a person with a name: ${person.name} and an age: ${person.age}. ${person.airplane ? 'Has an airplane.' : ''}`; // template string `` with inner variable `${}`
 }
 const personNew: Person = {age: 35, name: 'Asdf'}
 console.log(`Logger: ${greetNew(personNew)}`)
+const personNewWithAPlane: Person = {age: 65, name: 'Qwerty', airplane: true}
+console.log(`Logger: ${greetNew(personNewWithAPlane)}`)
+
+interface Employee {
+    salary: number;
+    securityLevel?: number;
+}
+
+interface EmployedPerson extends Person, Employee {
+    dateOfEmployment?: string;
+}
+
+const employedPerson: EmployedPerson = {
+    age: 44,
+    name: 'Zxcvb',
+    salary: 900000,
+    airplane: true,
+    dateOfEmployment: '25/05/1999.'
+}
+console.log(`Logger: ${greetNew(employedPerson)}`)
 
 console.log('\n\n\\Kraj lekcije')
