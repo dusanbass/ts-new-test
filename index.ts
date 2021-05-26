@@ -4,6 +4,7 @@ import Point2D, { isItTheSameSpot } from './Point2D'; // default import
 import Line2D from './Line2D'; // default import
 import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
+import readExcel from './ExcelReader';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -335,3 +336,4 @@ const l3d1 = new Line3D(p1, p2);
 const l3d2 = new Line3D(p3, p4);
 
 console.log(`line l1 has greater length than line l2: ${Line3D.compareLines(l3d1, l3d2)}`)
+readExcel();
