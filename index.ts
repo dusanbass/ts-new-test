@@ -174,6 +174,7 @@ interface Pingable {
     ping(): void;
 }
 
+// Useless object, just to see that interface and object aint the same thing
 const pingable = {
     ping: function ping(){ console.log('ping') }
 }
@@ -187,11 +188,44 @@ class Sonar implements Pingable, Pongable {
     ping(): void { console.log("ping!"); }
     pong(): void { console.log("pong!"); }
 }
-// END interface plus class:
 
 const sonar = new Sonar()
 sonar.ping()
 sonar.pong()
+// ^- END interface plus class 
+
+// How to extend a class without parameters:
+
+class Animal {
+    move() {
+        console.log("Moving along!");
+    }
+}
+
+const someAnimal = new Animal();
+console.log(someAnimal)
+someAnimal.move();
+
+class Dog extends Animal {
+    woof(times: number) {
+        // for is a KEYWORD, used to make a loop 
+        // e.g. repeat code in the brackets n times
+        for (let i = 0; i < times; i++) {
+            console.log('woof!')
+        }
+    }
+    // Overrides, if we want to do it...
+    // move() {
+    //     console.log("Moving fast!!!");
+    // }
+}
+
+const dog1 = new Dog();
+console.log(dog1); // .eslintrc
+dog1.move();
+dog1.woof(2);
+
+// ^--- end how to extend class w/o parameters
 
 // TO MAKE AN INSTANCE, IS TO USE NEW WITH A CONSTRUCTOR
 const p2D = new Point2D();

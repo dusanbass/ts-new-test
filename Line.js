@@ -1,4 +1,8 @@
 "use strict";
+/**
+ * idea is taken over from the: https://javascript.info/static-properties-methods
+ * and math formula from the: https://www.wikihow.com/Use-Distance-Formula-to-Find-the-Length-of-a-Line
+ */
 exports.__esModule = true;
 exports.Line2D = void 0;
 var Line2D = /** @class */ (function () {
