@@ -1,6 +1,7 @@
 import { hi } from './util';
 // import { Point } from './Point';
 import { Point2D } from './Point2D';
+import { Line2D } from './Line';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -172,7 +173,7 @@ console.log('with constructors: \n');
 const p2D = new Point2D();
 console.log(`p: ${p2D}, type: ${typeof p2D}, JSON: ${JSON.stringify(p2D)}, position: ${p2D.position()}`)
 
-const p2DNewBoth = new Point2D(1, 1);
+const p2DNewBoth = new Point2D(1, 10);
 console.log(`p: ${p2DNewBoth}, type: ${typeof p2DNewBoth}, JSON: ${JSON.stringify(p2DNewBoth)}, position: ${p2DNewBoth.position()}`)
 
 const p2DNewWithX = new Point2D(1);
@@ -180,3 +181,11 @@ console.log(`p: ${p2DNewWithX}, type: ${typeof p2DNewWithX}, JSON: ${JSON.string
 
 const p2DNewWithY = new Point2D(undefined, 1);
 console.log(`p: ${p2DNewWithY}, type: ${typeof p2DNewWithY}, JSON: ${JSON.stringify(p2DNewWithY)}, position: ${p2DNewWithY.position()}`)
+
+const l1 = new Line2D(p2D, p2DNewBoth);
+console.log(l1.toString());
+const l2 = new Line2D(p2DNewWithX, p2DNewWithY);
+console.log(l2.toString());
+
+const isL1GreaterThanL2 = Line2D.compareLines(l1, l2);
+console.log(`Line l1 is greater than l2: ${isL1GreaterThanL2}`);
