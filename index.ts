@@ -169,7 +169,7 @@ console.log(`p: ${o}, type: ${typeof o}, JSON: ${JSON.stringify(o)}`)
 
 console.log('with constructors: \n');
 
-// Primer kako koristiti interface i class:
+// example class implements interface:
 interface Pingable {
     ping(): void;
 }
@@ -187,6 +187,7 @@ class Sonar implements Pingable, Pongable {
     ping(): void { console.log("ping!"); }
     pong(): void { console.log("pong!"); }
 }
+// END interface plus class:
 
 const sonar = new Sonar()
 sonar.ping()
