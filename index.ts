@@ -247,15 +247,15 @@ const someAnimalCsr = new AnimalCsr(Sizes.medium);
 console.log(someAnimalCsr)
 someAnimalCsr.move();
 
-class DogCsr extends AnimalCsr {
-    name: string;
-    age: number;
+class DogCsr extends AnimalCsr { // .eslintrc will say if we need to type in if it is public or...
+    public name: string; // public modifier so i can dog1.name = something...
+    age: number; // without public it will be as if i written it, but i didn't
     constructor(name: string, age: number, size: Sizes) {
         super(size);
         this.name = name;
         this.age = age;
     }
-    woof(times: number) {
+    public woof(times: number) {
         // for is a KEYWORD, used to make a loop 
         // e.g. repeat code in the brackets n times
         for (let i = 0; i < times; i++) {
@@ -271,9 +271,9 @@ class DogCsr extends AnimalCsr {
 const dogCsr1 = new DogCsr('black', 3, Sizes.small);
 console.log(dogCsr1);
 // dogCsr1.name = 'black'
-// dogCsr1.age = 3
+dogCsr1.age = 3
 // dogCsr1.move();
-// dogCsr1.woof(2);
+dogCsr1.woof(2);
 const dogCsr2 = new DogCsr('green', 7, Sizes.small);
 console.log(dogCsr2);
 const mapOfSizesToString = {
@@ -284,6 +284,7 @@ const mapOfSizesToString = {
     [Sizes.huge]: 'a huge animal',
 }
 console.log(`dogCsr2 has a size of ${mapOfSizesToString[dogCsr2.size]}`);
+
 
 // ^--- END how to extend class with parameters and constructors + super
 

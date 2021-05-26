@@ -30,3 +30,8 @@ https://www.typescriptlang.org/docs/handbook/intro.html
 
 **Online Playground**
 https://www.typescriptlang.org/play
+
+----
+*HOMEWORK*
+
+Try to make this: https://subversion.american.edu/aisaac/notes/images/uml-class-diagram.png
