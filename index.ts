@@ -169,6 +169,29 @@ console.log(`p: ${o}, type: ${typeof o}, JSON: ${JSON.stringify(o)}`)
 
 console.log('with constructors: \n');
 
+// Primer kako koristiti interface i class:
+interface Pingable {
+    ping(): void;
+}
+
+const pingable = {
+    ping: function ping(){ console.log('ping') }
+}
+
+
+interface Pongable {
+    pong(): void;
+}
+
+class Sonar implements Pingable, Pongable {
+    ping(): void { console.log("ping!"); }
+    pong(): void { console.log("pong!"); }
+}
+
+const sonar = new Sonar()
+sonar.ping()
+sonar.pong()
+
 // TO MAKE AN INSTANCE, IS TO USE NEW WITH A CONSTRUCTOR
 const p2D = new Point2D();
 console.log(`p: ${p2D}, type: ${typeof p2D}, JSON: ${JSON.stringify(p2D)}, position: ${p2D.position()}`)
