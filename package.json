@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "start": "tsc index.ts && node index.js"
+    "start": "tsc index.ts && node index.js",
+    "prestart": "npm run build",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "typescript": "^4.2.4"
+  "devDependencies": {
+    "typescript": "^4.3.2"
   }
 }
