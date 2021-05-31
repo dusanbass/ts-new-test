@@ -1,5 +1,9 @@
 **Use the project:**
 * ```npm i```
+
+and then start it via:
+* ```npm start```
+or
 * ```npm run start```
 
 For auto-start and watcher:
