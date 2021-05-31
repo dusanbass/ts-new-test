@@ -22,7 +22,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("./util");
 // import { Point } from './Point';
 var Point2D_1 = require("./Point2D");
-var Line_1 = require("./Line");
+var Line_1 = require("./Line"); // destructure
+var Line3D_1 = __importDefault(require("./Line3D")); // default
 var Point3D_1 = __importDefault(require("./Point3D")); // destructure as an import
 var message = "Hello World!";
 var small = message.toLowerCase();
@@ -268,4 +269,11 @@ console.log("Line l1 is greater than l2: " + isL1GreaterThanL2);
 console.log('\nNEW TOPIC ABOUT MODULES\n');
 var p3d = new Point3D_1.default(0, 0, 0);
 console.log("p3d instance of the Point3D class: " + p3d.position());
+var p1 = new Point3D_1.default(0, 0, 0);
+var p2 = new Point3D_1.default(0, 2, 4);
+var p3 = new Point3D_1.default(0, 1, 1);
+var p4 = new Point3D_1.default(0, 11, 22);
+var l3d1 = new Line3D_1.default(p1, p2);
+var l3d2 = new Line3D_1.default(p3, p4);
+console.log("line l1 has greater length than line l2: " + Line3D_1.default.compareLines(l3d1, l3d2));
 //# sourceMappingURL=index.js.map

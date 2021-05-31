@@ -7,7 +7,7 @@ export default class Point3D extends Point2D {
         this.z = z;
     };
     // overwrite - write over some previously defined method
-    position(): string {
+    position(): string { // this should be called toString actually...
         return `${super.position()} z: ${this.z}` // template string + super method
     }
 }

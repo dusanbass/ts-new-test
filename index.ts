@@ -1,7 +1,8 @@
 import { hi } from './util';
 // import { Point } from './Point';
 import { Point2D } from './Point2D';
-import { Line2D } from './Line';
+import { Line2D } from './Line'; // destructure
+import Line3D from './Line3D' // default
 import Point3D from './Point3D' // destructure as an import
 
 const message: string = "Hello World!";
@@ -316,3 +317,15 @@ console.log('\nNEW TOPIC ABOUT MODULES\n');
 const p3d = new Point3D(0, 0, 0);
 
 console.log(`p3d instance of the Point3D class: ${p3d.position()}`);
+
+
+
+const p1 = new Point3D(0, 0, 0);
+const p2 = new Point3D(0, 2, 4);
+const p3 = new Point3D(0, 1, 1);
+const p4 = new Point3D(0, 11, 22);
+
+const l3d1 = new Line3D(p1, p2);
+const l3d2 = new Line3D(p3, p4);
+
+console.log(`line l1 has greater length than line l2: ${Line3D.compareLines(l3d1, l3d2)}`)
