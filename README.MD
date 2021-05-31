@@ -6,6 +6,7 @@ and then start it via:
 or
 * ```npm run start```
 
+_**NOTE THAT THIS IS OPTIONAL:**_
 For auto-start and watcher:
 * add nodemon (npm i nodemon), and use it like this in separate terminal ```npx nodemon server```
 * change package.json as to add --watch to your start ```"start": "tsc index.ts --watch"```
