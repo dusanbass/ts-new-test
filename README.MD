@@ -31,3 +31,7 @@ If nodemon starts making troubles: https://stackoverflow.com/questions/35530930/
 *HOMEWORK*
 
 Try to make this: https://subversion.american.edu/aisaac/notes/images/uml-class-diagram.png
+
+* add use of the toString() for 3d points
+* make new 3d points and lines
+* use 3d line toString in some console.log!
