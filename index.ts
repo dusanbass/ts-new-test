@@ -2,6 +2,7 @@ import { hi } from './util';
 // import { Point } from './Point';
 import { Point2D } from './Point2D';
 import { Line2D } from './Line';
+import Point3D from './Point3D' // destructure as an import
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -176,7 +177,7 @@ interface Pingable {
 
 // Useless object, just to see that interface and object aint the same thing
 const pingable = {
-    ping: function ping(){ console.log('ping') }
+    ping: function ping() { console.log('ping') }
 }
 
 
@@ -308,3 +309,10 @@ console.log(l2.toString());
 
 const isL1GreaterThanL2 = Line2D.compareLines(l1, l2);
 console.log(`Line l1 is greater than l2: ${isL1GreaterThanL2}`);
+
+// NEW TOPIC ABOUT MODULES:
+console.log('\nNEW TOPIC ABOUT MODULES\n');
+
+const p3d = new Point3D(0, 0, 0);
+
+console.log(`p3d instance of the Point3D class: ${p3d.position()}`);

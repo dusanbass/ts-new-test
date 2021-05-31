@@ -14,12 +14,16 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("./util");
 // import { Point } from './Point';
 var Point2D_1 = require("./Point2D");
 var Line_1 = require("./Line");
+var Point3D_1 = __importDefault(require("./Point3D")); // destructure as an import
 var message = "Hello World!";
 var small = message.toLowerCase();
 console.log("small " + small);
@@ -260,4 +264,8 @@ var l2 = new Line_1.Line2D(p2DNewWithX, p2DNewWithY);
 console.log(l2.toString());
 var isL1GreaterThanL2 = Line_1.Line2D.compareLines(l1, l2);
 console.log("Line l1 is greater than l2: " + isL1GreaterThanL2);
+// NEW TOPIC ABOUT MODULES:
+console.log('\nNEW TOPIC ABOUT MODULES\n');
+var p3d = new Point3D_1.default(0, 0, 0);
+console.log("p3d instance of the Point3D class: " + p3d.position());
 //# sourceMappingURL=index.js.map
