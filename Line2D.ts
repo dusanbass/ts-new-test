@@ -1,11 +1,12 @@
 /**
+ * DOCUMENTATION AND LICENSE / NO LICENSE
  * idea is taken over from the: https://javascript.info/static-properties-methods
  * and math formula from the: https://www.wikihow.com/Use-Distance-Formula-to-Find-the-Length-of-a-Line
  */
 
-import { Point2D } from "./Point2D";
+import Point2D from "./Point2D"; // default import, it is not a destructure -> there is no { importVar }
 
-export class Line2D {
+export default class Line2D {
     a: Point2D;
     b: Point2D;
     constructor(a: Point2D, b: Point2D) {

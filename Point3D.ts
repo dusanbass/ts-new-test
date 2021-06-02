@@ -1,7 +1,7 @@
-import { Point2D } from "./Point2D";
+import Point2D from "./Point2D";
 
 export default class Point3D extends Point2D {
-    z: number;
+    z: number; 
     constructor(x: number = 0, y: number = 0, z: number = 0) {
         super(x, y); // new Point2D(x, y)
         this.z = z;

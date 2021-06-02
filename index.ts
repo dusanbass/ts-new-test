@@ -1,9 +1,9 @@
 import { hi } from './util';
-// import { Point } from './Point';
-import { Point2D } from './Point2D';
-import { Line2D } from './Line'; // destructure
+// import { Point } from './Point'; // destructured or "named" import, NAMED import is more common
+import Point2D, { isItTheSameSpot } from './Point2D'; // default import
+import Line2D from './Line2D'; // default import
+import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
-import Point3D from './Point3D' // destructure as an import
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -297,6 +297,8 @@ console.log(`p: ${p2D}, type: ${typeof p2D}, JSON: ${JSON.stringify(p2D)}, posit
 const p2DNewBoth = new Point2D(1, 10);
 console.log(`p: ${p2DNewBoth}, type: ${typeof p2DNewBoth}, JSON: ${JSON.stringify(p2DNewBoth)}, position: ${p2DNewBoth.position()}`)
 
+console.log(`Points p2D and p2DNewBoth are the same: ${isItTheSameSpot(p2D, p2DNewBoth)}`);
+
 const p2DNewWithX = new Point2D(1);
 console.log(`p: ${p2DNewWithX}, type: ${typeof p2DNewWithX}, JSON: ${JSON.stringify(p2DNewWithX)}, position: ${p2DNewWithX.position()}`)
 
@@ -308,6 +310,8 @@ console.log(l1.toString());
 const l2 = new Line2D(p2DNewWithX, p2DNewWithY);
 console.log(l2.toString());
 
+// Idea about STATIC, is WHO is going to call it
+// only class can call static method e.g. the BigLetterThing
 const isL1GreaterThanL2 = Line2D.compareLines(l1, l2);
 console.log(`Line l1 is greater than l2: ${isL1GreaterThanL2}`);
 
@@ -321,6 +325,8 @@ console.log(`p3d instance of the Point3D class: ${p3d.position()}`);
 
 
 const p1 = new Point3D(0, 0, 0);
+console.log(`p1: ${p1}, position: ${p1.position()}`)
+
 const p2 = new Point3D(0, 2, 4);
 const p3 = new Point3D(0, 1, 1);
 const p4 = new Point3D(0, 11, 22);
