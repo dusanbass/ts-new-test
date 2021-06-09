@@ -27,6 +27,10 @@ If nodemon starts making troubles: https://stackoverflow.com/questions/35530930/
 **How to setup a debugger for TS**
 [Read it here](https://pkief.medium.com/how-to-debug-typescript-with-vs-code-9cec93b4ae56)
 
+# Learning about promises
+[Read it here](https://basarat.gitbook.io/typescript/future-javascript/promise)
+Our example here on the feature/xlsx branch inside the ExcelReader.ts file shows how to.
+
 ----
 *HOMEWORK*
 
@@ -35,3 +39,4 @@ Try to make this: https://subversion.american.edu/aisaac/notes/images/uml-class-
 * add use of the toString() for 3d points
 * make new 3d points and lines
 * use 3d line toString in some console.log!
+
