@@ -5,6 +5,7 @@ import Line2D from './Line2D'; // default import
 import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
 import fetcher from './Fetcher';
+import DogModule from './Dog';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -338,3 +339,6 @@ const l3d2 = new Line3D(p3, p4);
 console.log(`line l1 has greater length than line l2: ${Line3D.compareLines(l3d1, l3d2)}`)
 
 fetcher();
+
+const yellowDog = new DogModule();
+console.log(`yellowDog: ${yellowDog}, type: ${typeof yellowDog}, JSON: ${JSON.stringify(yellowDog)}, method call: ${yellowDog.come()}`)
