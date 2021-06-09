@@ -5,7 +5,7 @@ import Line2D from './Line2D'; // default import
 import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
 import fetcher from './Fetcher';
-import DogModule from './Dog';
+import DogModule, { DogInterface } from './Dog';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -342,3 +342,8 @@ fetcher();
 
 const yellowDog = new DogModule();
 console.log(`yellowDog: ${yellowDog}, type: ${typeof yellowDog}, JSON: ${JSON.stringify(yellowDog)}, method call: ${yellowDog.come()}`)
+
+// options, settings, params...
+const optionsForDog2: DogInterface = { color: " bright yellow", eyeColor: " dark black", height: 14, length: 22, weight: 30 }
+const yellowDog2 = new DogModule(optionsForDog2);
+console.log(`yellowDog2: ${yellowDog2}, type: ${typeof yellowDog2}, JSON: ${JSON.stringify(yellowDog2)}, method call: ${yellowDog2.come()}`)
