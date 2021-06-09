@@ -12,6 +12,7 @@ export default class Dog implements DogInterface {
     height: number;
     length: number;
     weight: number;
+    private age: number;
 
     constructor(
         {
@@ -27,6 +28,15 @@ export default class Dog implements DogInterface {
         this.height = height;
         this.length = length;
         this.weight = weight;
+        this.age = 7;
+    }
+    
+    public set setAge(age : number) {
+        this.age = age;
+    }
+
+    public get value() : number {
+        return this.age
     }
 
     sit() {
