@@ -6,6 +6,8 @@ import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
 import fetcher from './Fetcher';
 import DogModule, { DogInterface } from './Dog';
+import Farmer from './Farmer';
+import SheepDog from './SheepDog';
 
 const message: string = "Hello World!";
 const small = message.toLowerCase();
@@ -338,12 +340,31 @@ const l3d2 = new Line3D(p3, p4);
 
 console.log(`line l1 has greater length than line l2: ${Line3D.compareLines(l3d1, l3d2)}`)
 
-fetcher();
 
-const yellowDog = new DogModule();
-console.log(`yellowDog: ${yellowDog}, type: ${typeof yellowDog}, JSON: ${JSON.stringify(yellowDog)}, method call: ${yellowDog.come()}`)
 
 // options, settings, params...
-const optionsForDog2: DogInterface = { color: " bright yellow", eyeColor: " dark black", height: 14, length: 22, weight: 30 }
+const optionsForDog2: DogInterface = { 
+    color: " bright yellow", 
+    eyeColor: " dark black", 
+    height: 14, 
+    length: 22, 
+    weight: 30 
+}
 const yellowDog2 = new DogModule(optionsForDog2);
 console.log(`yellowDog2: ${yellowDog2}, type: ${typeof yellowDog2}, JSON: ${JSON.stringify(yellowDog2)}, method call: ${yellowDog2.come()}`)
+
+const farmerJoe = new Farmer('Joe', new SheepDog({
+    bangsColor: 'red',
+    eyeColor: 'green',
+    color: 'yellow',
+    height: 75,
+    length: 100,
+    name: 'Sima',
+    weight: 60
+}));
+
+farmerJoe.feedTheDog();
+console.log(`Farmer: ${farmerJoe.name} told his dog ${farmerJoe.sheepDog.name} to:`,farmerJoe.sheepDog.sit()); // template string + concat
+farmerJoe.sheepDog.heardSheeps();
+
+fetcher();

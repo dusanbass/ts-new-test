@@ -21,7 +21,7 @@ export default class Dog implements DogInterface {
             height = 0,
             length = 0,
             weight = 0
-        } = {}
+        }: DogInterface
     ) {
         this.color = color;
         this.eyeColor = eyeColor;
