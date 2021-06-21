@@ -4,7 +4,7 @@ import Point2D, { isItTheSameSpot } from './Point2D'; // default import
 import Line2D from './Line2D'; // default import
 import Point3D from './Point3D' // default import
 import Line3D from './Line3D' // default
-import fetcher from './Fetcher';
+import fetcher, { postHttp } from './Fetcher';
 import DogModule, { DogInterface } from './Dog';
 import Farmer from './Farmer';
 import SheepDog from './SheepDog';
@@ -368,3 +368,4 @@ console.log(`Farmer: ${farmerJoe.name} told his dog ${farmerJoe.sheepDog.name} t
 farmerJoe.sheepDog.heardSheeps();
 
 fetcher();
+postHttp();
